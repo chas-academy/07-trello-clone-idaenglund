@@ -1,0 +1,76 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+
+
+    <title>jQuery UI - Trello Clone </title>
+</head>
+
+<body>
+
+    <div class="board">
+        <div class="column">
+            <div class="list">
+                <div class="list_header">
+                    Todo
+                </div>
+                <ul class="list_cards">
+                    <li class="card">
+                        Card#1
+                        <button class="delete"></button>
+                    </li>
+                    <li class="add_new">
+                        <button class="add">Add new Card</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="column">
+                <div class="list">
+                    <div class="list_header">
+                        Doing
+                    </div>
+                    <ul class="list_cards">
+                        <li class="card">
+                            Card#2
+                        </li>
+                        <li class="add_new">
+                            <button class="add">Add new Card</button>
+                        </li>
+                    </ul>
+                </div>
+        </div>  
+                <div class="column">
+                    <div class="list">
+                        <div class="list_header">
+                            Done
+                        </div>
+                        <ul class="list_cards">
+                            <li class="card">
+                                Card#3
+                            </li>
+                            <li class="add_new">
+                                <button class="add">Add new Card</button>
+                            </li>
+                        </ul>
+                </div>
+                    <div class="column">
+                        <form id="new-list" name="sillyform" action=""></form>
+                            <input type="text" name="title" placeholder="please name the list">
+                            <button id="addNew" type="submit">Add New List</button>
+                        </form>
+                    </div>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+
+</html>
