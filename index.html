@@ -7,7 +7,6 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-
     <link rel="stylesheet" href="styles.css">
 
 
@@ -21,15 +20,18 @@
             <div class="list">
                 <div class="list-header">
                     To Do 
-                    <button class="delete-list">X</button>
+                    <button class="close">X</button>
                 </div>
                 <ul class="list-cards">
                     <li class="card">
-                        Card #1
-                        <button class="delete-card">X</button>
+                        <h class="card-title">Card #1   </h>
+                        <button class="close">X</button>
                     </li>
                     <li class="new-card">
-                        <button class="add">+New Card</button>
+                        <form class="new-card" action="index.html">
+                            <input type="text" name="title" placeholder="Please name the card" />
+                            <button class="add">+New card</button>
+                        </form>
                     </li>
                 </ul>
             </div>
@@ -38,15 +40,18 @@
             <div class="list">
                 <div class="list-header">
                     In Progress
-                    <button class="delete-list">X</button>
+                    <button class="close">X</button>
                 </div>
                 <ul class="list-cards">
                     <li class="card">
                         Card #2
-                        <button class="delete-card">X</button>
+                        <button class="close">X</button>
                     </li>
                     <li class="new-card">
-                        <button class="add">+New Card</button>
+                        <form class="new-card" action="index.html">
+                            <input type="text" name="title" placeholder="Please name the card" />
+                            <button class="add">+New card</button>
+                        </form>
                     </li>
                 </ul>
             </div>
@@ -55,15 +60,18 @@
             <div class="list">
                 <div class="list-header">
                     Missions completed
-                    <button class="delete-list">X</button>
+                    <button class="close">X</button>
                 </div>
                 <ul class="list-cards">
                     <li class="card">
                         Card #3
-                        <button class="delete">X</button>
+                        <button class="close">X</button>
                     </li>
                     <li class="new-card">
-                        <button class="add">+New Card</button>
+                        <form class="new-card" action="index.html">
+                            <input type="text" name="title" placeholder="Please name the card" />
+                            <button class="add">+New card</button>
+                        </form>
                     </li>
                 </ul>
             </div>
@@ -74,7 +82,7 @@
         </div>
         <div id="list-create" title="make new list" style="height: 30px"></div>
         <form>
-            <input type="text" name="title" id="List title">
+            <input type="text" name="title" placeholder="List title">
         </form>
     </div>
 </body>
