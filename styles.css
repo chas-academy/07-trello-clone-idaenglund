@@ -1,8 +1,9 @@
 body {
-    background-color: rgb(0, 174, 204); 
+    background-color: rgb(57, 183, 206); 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    color: white; 
-    font-size: 1.25em; 
+    margin: 0; 
+    padding: 25px; 
+   
 
 }
 
@@ -10,6 +11,7 @@ body {
     display: inline-block;
     width: 270px; 
     height: 100%; 
+    border: gray; 
 
 
 
@@ -18,7 +20,44 @@ body {
 .list {
     display: flex; 
     flex-direction: column; 
-    background-color: gray; 
+    background-color: lightblue; 
+    border-radius: 5px;  
+
+}
+
+ul {
+    list-style: none; 
+}
+
+.card {
+    text-decoration: none; 
+    padding: 20%; 
+    background-color: white; 
+    display: flex; 
+    margin-left: -26px; 
+    margin-right: 10px; 
+    border-radius: 10px; 
+
+}
+
+.list-header {
+    font-weight: bold; 
+    text-align: center;
+    padding-bottom: 20%;  
+}
+
+#new-list {
+    justify-content: flex-end; 
+}
+
+.delete-list {
+
+    position: absolute; 
 
 
 }
+
+.delete-card {
+    
+}
+

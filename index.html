@@ -19,56 +19,63 @@
     <div class="board">
         <div class="column">
             <div class="list">
-                <div class="list_header">
-                    Todo
+                <div class="list-header">
+                    To Do 
+                    <button class="delete-list">X</button>
                 </div>
-                <ul class="list_cards">
+                <ul class="list-cards">
                     <li class="card">
-                        Card#1
-                        <button class="delete"></button>
+                        Card #1
+                        <button class="delete-card">X</button>
                     </li>
-                    <li class="add_new">
-                        <button class="add">Add new Card</button>
+                    <li class="new-card">
+                        <button class="add">+New Card</button>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="column">
-                <div class="list">
-                    <div class="list_header">
-                        Doing
-                    </div>
-                    <ul class="list_cards">
-                        <li class="card">
-                            Card#2
-                        </li>
-                        <li class="add_new">
-                            <button class="add">Add new Card</button>
-                        </li>
-                    </ul>
+            <div class="list">
+                <div class="list-header">
+                    In Progress
+                    <button class="delete-list">X</button>
                 </div>
-        </div>  
-                <div class="column">
-                    <div class="list">
-                        <div class="list_header">
-                            Done
-                        </div>
-                        <ul class="list_cards">
-                            <li class="card">
-                                Card#3
-                            </li>
-                            <li class="add_new">
-                                <button class="add">Add new Card</button>
-                            </li>
-                        </ul>
-                </div>
-                    <div class="column">
-                        <form id="new-list" name="sillyform" action=""></form>
-                            <input type="text" name="title" placeholder="please name the list">
-                            <button id="addNew" type="submit">Add New List</button>
-                        </form>
-                    </div>
+                <ul class="list-cards">
+                    <li class="card">
+                        Card #2
+                        <button class="delete-card">X</button>
+                    </li>
+                    <li class="new-card">
+                        <button class="add">+New Card</button>
+                    </li>
+                </ul>
+            </div>
         </div>
+        <div class="column">
+            <div class="list">
+                <div class="list-header">
+                    Missions completed
+                    <button class="delete-list">X</button>
+                </div>
+                <ul class="list-cards">
+                    <li class="card">
+                        Card #3
+                        <button class="delete">X</button>
+                    </li>
+                    <li class="new-card">
+                        <button class="add">+New Card</button>
+                    </li>
+                </ul>
+            </div>
+         </div>   
+            <div class="column">
+                    <button id="new-list" type="submit">+New List</button>
+            </div>
+        </div>
+        <div id="list-create" title="make new list" style="height: 30px"></div>
+        <form>
+            <input type="text" name="title" id="List title">
+        </form>
     </div>
 </body>
 <script src="app.js"></script>
