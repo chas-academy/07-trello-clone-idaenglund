@@ -1,80 +1,219 @@
+html,
 body {
-    background-color:  #f1f1f1;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    margin: 0; 
-    padding: 25px; 
-   
-
-}
-
-.column {
-    display: inline-block;
-    width: 270px; 
-    height: 100%; 
-    border: gray; 
-
-
-
-}
-
-.list {
-    display: flex; 
-    flex-direction: column; 
-    background-color: lightblue; 
-    border-radius: 5px;  
-
+  background: #9999ff;
+  margin: 0;
+  padding: 30px 0 0;
+  font-family: sans-serif;
 }
 
 ul {
-    list-style: none; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.card {
-    text-decoration: none; 
-    padding: 10%; 
-    background-color: white; 
-    display: flex; 
-    margin-left: -30px; 
-    margin-right: 10px; 
-    border-radius: 10px; 
-    z-index: 0; 
-    position: relative;
-    margin-bottom: 5px; 
-
-}
-
-.list-header {
-    font-weight: bold; 
-    text-align: center;
-    padding-bottom: 20%;  
-}
-
-#new-list {
-    justify-content: flex-end; 
-}
-
-.delete-list {
-
-    position: absolute; 
-
-
+ul li {
+    margin: 0;
+    padding: 0;
 }
 
 input {
-    width: 100%;
-    box-shadow: none;
-    border-radius: 3px;
-    height: auto;
-    margin-bottom: 4px;
-    max-height: 162px;
-    min-height: 54px;
-    overflow-y: auto;
-    padding: 0;
-    resize: none;
-    word-wrap: break-word;
-    text-indent: 8px;
-    margin-left: -21px; 
-    margin-right: 10px; 
-    border-radius: 10px; 
-  }
+  width: 100%;
+  border: none;
+  box-shadow: none;
+  border-radius: 3px;
+  height: auto;
+  margin-bottom: 4px;
+  max-height: 162px;
+  min-height: 54px;
+  overflow-y: auto;
+  padding: 0;
+  resize: none;
+  word-wrap: break-word;
+  text-indent: 8px;
+}
 
+.hide {
+  display: none;
+}
+
+.board {
+    height: 100vh;
+    display: flex;
+}
+
+.column {
+  width: 270px;
+  margin: 0 5px;
+  height: 100%;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.list {
+  background: #e2e4e6;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  position: relative;
+  white-space: normal;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  user-select: none;
+}
+
+.list-header {
+  font-size: 14px;
+  min-height: 38px;
+  line-height: 38px;
+  font-weight: bold;
+  padding: 12px 10px;
+  margin: 0;
+  color: #4d4d4d;
+}
+
+.list-header .delete {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 8px;
+}
+
+.list-cards {
+  flex: 1 1 auto;
+  margin-bottom: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0 4px;
+  padding: 0 4px;
+  z-index: 1;
+  min-height: 0;
+}
+
+.list-cards .add-new {
+  margin: 10px 0;
+}
+
+.list-cards .add-new .button {
+  width: 100%;
+}
+
+.card {
+  text-decoration: none;
+  display: flex;
+  background: #fff;
+  color: #444;
+  padding: 6px 6px 6px 8px;
+  font-size: 14px;
+  border-radius: 3px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 5px;
+  transition: transform 0.25s ease;
+  transition: opacity 0.25s ease;
+  height: auto;
+  min-height: 20px;
+  line-height: 20px;
+  position: relative;
+  z-index: 0;
+}
+
+.card .card-due {
+  color: palevioletred;
+  margin-left: auto;
+  margin-right: 25px;
+  font-size: 12px;
+}
+
+.card .button {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  padding: 0;
+}
+
+.ui-dialog {
+  background: #e2e4e6;
+  border-radius: 3px;
+  padding: 10px;
+  z-index: 50;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+  display: none;
+}
+
+.ui-dialog input {
+  min-height: 24px;
+}
+
+.ui-dialog button {
+  margin-right: 8px;
+}
+
+.ui-dialog .tab {
+  padding: 10px 12px;
+  display: inline-flex;
+  color: #fff;
+  background: gray;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.ui-dialog .tab a {
+  color: #fff;
+}
+
+.ui-dialog .tab.ui-state-active {
+  background: lightgray;
+}
+
+.ui-button,
+.button {
+  display: inline-flex;
+  overflow: hidden;
+  padding: 8px 10px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 150ms linear;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none !important;
+  text-transform: none;
+  text-transform: capitalize;
+  border: 0 none;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.3;
+  appearance: none;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 160px;
+}
+
+.ui-sortable-placeholder {
+  display: block;
+  background-color: #BFB;
+  border: 2px dashed gray;
+  width: 268px;
+}
+
+.ui-sortable-helper {
+  cursor: grabbing;
+  box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.3), 0px 0px 1px rgba(0, 0, 0, 0.5);
+  transform: rotate(4deg);
+}
+
+.ui-datepicker-current-day .ui-state-active,
+.ui-datepicker-today,
+.ui-datepicker-days-cell-over.ui-datepicker-current-day.ui-datepicker-today {
+  background: yellow;
+}

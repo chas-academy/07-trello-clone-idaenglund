@@ -1,36 +1,37 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trello Clone</title>
+
+    <!-- Optionally include jquery ui css here -->
+    <!-- https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css -->
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
     <link rel="stylesheet" href="styles.css">
-
-
-    <title>jQuery UI - Trello Clone </title>
 </head>
-
 <body>
-
     <div class="board">
         <div class="column">
             <div class="list">
                 <div class="list-header">
-                    To Do 
-                    <button class="close">X</button>
+                    To Do
+                    <button class="button delete">X</button>
                 </div>
                 <ul class="list-cards">
                     <li class="card">
-                        <h class="card-title">Card #1   </h>
-                        <button class="close">X</button>
+                        <span class="card-title">Card #1</span>
+                        <span class="card-due"></span>
+                        <button class="button delete">X</button>
                     </li>
-                    <li class="new-card">
+                    <li class="add-new">
                         <form class="new-card" action="index.html">
                             <input type="text" name="title" placeholder="Please name the card" />
-                            <button class="add">+New card</button>
+                            <button class="button add">Add new card</button>
                         </form>
                     </li>
                 </ul>
@@ -39,18 +40,19 @@
         <div class="column">
             <div class="list">
                 <div class="list-header">
-                    In Progress
-                    <button class="close">X</button>
+                    Doing
+                    <button class="button delete">X</button>
                 </div>
                 <ul class="list-cards">
                     <li class="card">
-                        Card #2
-                        <button class="close">X</button>
+                        <span class="card-title">Card #2</span>
+                        <span class="card-due"></span>
+                        <button class="button delete">X</button>
                     </li>
-                    <li class="new-card">
+                    <li class="add-new">
                         <form class="new-card" action="index.html">
                             <input type="text" name="title" placeholder="Please name the card" />
-                            <button class="add">+New card</button>
+                            <button class="button add">Add new card</button>
                         </form>
                     </li>
                 </ul>
@@ -59,33 +61,51 @@
         <div class="column">
             <div class="list">
                 <div class="list-header">
-                    Missions completed
-                    <button class="close">X</button>
+                     Mission Completed
+                    <button class="button delete">X</button>
                 </div>
                 <ul class="list-cards">
                     <li class="card">
-                        Card #3
-                        <button class="close">X</button>
+                        <span class="card-title">Card #3</span>
+                        <span class="card-due">2018-01-26</span>
+                        <button class="button delete">X</button>
                     </li>
-                    <li class="new-card">
+                    <li class="add-new">
                         <form class="new-card" action="index.html">
                             <input type="text" name="title" placeholder="Please name the card" />
-                            <button class="add">+New card</button>
+                            <button class="button add">Add new card</button>
                         </form>
                     </li>
                 </ul>
             </div>
-         </div>   
-            <div class="column">
-                    <button id="new-list" type="submit">+New List</button>
-            </div>
         </div>
-        <div id="list-create" title="make new list" style="height: 30px"></div>
-        <form>
-            <input type="text" name="title" placeholder="List title">
+        <div class="column adder">
+            <button id="new-list" class="button">Add new list</button>
+        </div>
+    </div>
+
+    <div id="list-creation-dialog" title="Create new list" class="hide">
+        <form> 
+            <input type="text" name="title" placeholder="List title" />
         </form>
+    </div>
+
+    <div id="card-details-dialog" title="Card details" class="hide">
+        <div id="card-tabs">
+            <ul>
+                <li class="tab"><a href="#tab1">Details</a></li>
+                <li class="tab"><a href="#tab2">Set due date</a></li>
+            </ul>
+            <div id="tab1">
+                <p><strong>Card title: </strong><span class="card-title"></span></p>
+                <p><strong>Card is due: </strong><span class="card-due"></span></p>
+            </div>
+            <div id="tab2">
+                <p class="due-date">Please select the due date</p>
+                <div class="datepicker"></div>
+            </div>
+        </div>
     </div>
 </body>
 <script src="app.js"></script>
-
 </html>
