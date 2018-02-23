@@ -217,3 +217,14 @@ input {
 .ui-datepicker-days-cell-over.ui-datepicker-current-day.ui-datepicker-today {
   background: yellow;
 }
+
+progress, progress[role] {
+  -webkit-appearance: none; 
+  border: none; 
+  background-size: auto; 
+  width: 100%; 
+}
+
+progress[value] {
+  background: rgb(146, 36, 36)
+}
